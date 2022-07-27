@@ -1,0 +1,26 @@
+.card {
+  color: var(--primary-color);
+  padding: var(--spacing-m);
+  border-radius: var(--border-radius);
+}
+
+.card-primary {
+  background-color: var(--primary-color);
+  color: var(--subtle-color);
+}
+
+.card-secondary {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+
+}
+
+.card-subtle {
+  background-color: var(--subtle-color);
+  color: var(--primary-color);
+}
+
+.card-light {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}

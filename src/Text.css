@@ -1,0 +1,35 @@
+
+.text {
+}
+
+.text-s {
+  font-size: 10px;
+}
+
+.text-m {
+  font-size: 14px;
+}
+
+.text-l {
+  font-size: 18px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.subtle-color {
+  color: var(--subtle-color);
+}
+
+.text-color-light {
+  color: var(--light-color);
+}

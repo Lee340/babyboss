@@ -1,0 +1,28 @@
+.btn {
+  padding: var(--spacing-s) var(--spacing-m);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:hover:active {
+  transform: scale(1.025);
+}
+
+.btn-subtle {
+  color: var(--primary-color);
+  background-color: var(--subtle-color);
+}
+
+.btn-secondary {
+  color: var(--light-color);
+  background-color: var(--secondary-color);
+}
+
+.btn-transparent {
+  color: var(--primary-color);
+}

@@ -18,6 +18,10 @@
   font-weight: bold;
 }
 
+.brand-color {
+  color: var(--brand-color);
+}
+
 .primary-color {
   color: var(--primary-color);
 }

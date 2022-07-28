@@ -29,12 +29,14 @@ export function HomeRoute() {
 
   return (
     <>
-      <p>Dorothy and Saki and Boram and Uni! Can you see this?</p>;
+      <Card color="light">
+        <p>This is Weekend!</p>
+      </Card>
       <div id="firebaseui-auth-container" />
       {users.map((user) => {
         return <div key={user.username}>{user.username}</div>;
       })}
-      <Card color="light">
+      <Card color="brand">
         <Button
           onClick={() => {
             writeUserData(

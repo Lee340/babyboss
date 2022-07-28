@@ -28,9 +28,10 @@ input {
   --spacing-s: 8px;
   --spacing-m: 12px;
   --spacing-l: 16px;
-  --secondary-color: #525E75;
-  --primary-color: #000;
-  --subtle-color: #DDDDDD;
-  --light-color: #fff;
+  --brand-color: #1A936F;
+  --primary-color: #114B5F;
+  --secondary-color: #88D498;
+  --subtle-color: #C6DABF;
+  --light-color: #F3E9D2;
   --border-radius: 4px;
 }

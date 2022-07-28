@@ -14,16 +14,16 @@ export function Navbar({ user }) {
   return (
     <header className="navbar">
       <div className="navbar-title">
-        <Text size="l" bold={true} color="secondary">
+        <Text size="l" bold={true} color="light">
           Weekend
         </Text>
       </div>
 
       <Button>
-        <Icon color="secondary" size="l" icon={faMagnifyingGlass} />
+        <Icon color="subtle" size="l" icon={faMagnifyingGlass} />
       </Button>
       <Button>
-        <Icon color="secondary" size="l" icon={faBasketShopping} />
+        <Icon color="subtle" size="l" icon={faBasketShopping} />
       </Button>
 
       <Button

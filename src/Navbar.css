@@ -1,12 +1,12 @@
 
 .navbar {
-  border-bottom: 1.5px solid var(--secondary-color);
+  background-color: var(--brand-color);
   padding-top: var(--spacing-m);
   padding-bottom: var(--spacing-m);
   padding-left: var(--spacing-m);
   color: var(--light-color);
   display: grid;
-  grid-template-columns: auto min-content min-content min-content min-content;
+  grid-template-columns: auto min-content min-content min-content;
 }
 
 .navbar-title {
@@ -20,6 +20,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  border: 1px solid var(--light-color);
 }
 
 .dropdown_list {

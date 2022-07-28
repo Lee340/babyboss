@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { ArtistsRoute } from "./ArtistsRoute";
+import { ShopRoute } from "./ShopRoute";
 import { Button } from "./Button";
 import { HomeRoute } from "./HomeRoute";
 import { Navbar } from "./Navbar";
 import { loginWithGoogle } from "./Authentication";
 
 function App() {
-
   const [route, setRoute] = useState("home");
   const [user, setUser] = useState(null);
 
@@ -24,10 +23,10 @@ function App() {
       </Button>
       <Button
         onClick={() => {
-          setRoute("artists");
+          setRoute("shop");
         }}
       >
-        See artists
+        Shop
       </Button>
       {user == null ? (
         <Button onClick={() => loginWithGoogle(setUser)}>
@@ -35,7 +34,7 @@ function App() {
         </Button>
       ) : null}
       {route === "home" ? <HomeRoute /> : null}
-      {route === "artists" ? <ArtistsRoute /> : null}
+      {route === "shop" ? <ShopRoute /> : null}
     </>
   );
 }

@@ -16,6 +16,8 @@ html, body, #root {
   flex-direction: column;
 }
 
+#map { height: 50vh; }
+
 a {
   text-decoration: none;
 }

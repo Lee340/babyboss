@@ -12,6 +12,7 @@ export function Button({ children, onClick, type }) {
         "btn-secondary": type === "secondary",
         "btn-subtle": type === "subtle",
         "btn-light": type === "light",
+        "btn-round": type === "round",
         "btn-transparent": type === "transparent" || type == null,
       })}
     >

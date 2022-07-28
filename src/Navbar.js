@@ -1,8 +1,5 @@
 import { useState } from "react";
-import {
-  faMagnifyingGlass,
-  faBasketShopping,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Text } from "./Text";
 import { Icon } from "./Icon";
 import "./Navbar.css";
@@ -22,9 +19,7 @@ export function Navbar({ user }) {
       <Button>
         <Icon color="brand" size="l" icon={faMagnifyingGlass} />
       </Button>
-      <Button>
-        <Icon color="brand" size="l" icon={faBasketShopping} />
-      </Button>
+      <Button>Shop</Button>
 
       <Button
         className="dropdown_button"

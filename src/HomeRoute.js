@@ -1,9 +1,18 @@
 import { useEffect, useState } from "react";
 import { getDatabase, ref, set, onValue } from "firebase/database";
-
+import {
+  faUtensils,
+  faDemocrat,
+  faBicycle,
+  faPersonSwimming,
+  faFlag,
+} from "@fortawesome/free-solid-svg-icons";
 import { Button } from "./Button";
 import { Card } from "./Card";
 import { app } from "./FirebaseApp";
+import { Icon } from "./Icon";
+
+import "./HomeRoute.css";
 
 const db = getDatabase(app);
 
@@ -29,8 +38,22 @@ export function HomeRoute() {
 
   return (
     <>
-      <Card color="light">
-        <p>This is Weekend!</p>
+      <Card color="light" className="main-tabselector">
+        <Button type="light">
+          Brunch <Icon size="l" icon={faUtensils} />
+        </Button>
+        <Button type="light">
+          Softplay <Icon size="l" icon={faDemocrat} />
+        </Button>
+        <Button type="light">
+          Park <Icon size="l" icon={faBicycle} />
+        </Button>
+        <Button type="light">
+          Pool <Icon size="l" icon={faPersonSwimming} />
+        </Button>
+        <Button type="light">
+          Event Venue <Icon size="l" icon={faFlag} />
+        </Button>
       </Card>
       <div id="firebaseui-auth-container" />
       {users.map((user) => {
@@ -49,8 +72,6 @@ export function HomeRoute() {
         >
           Click me
         </Button>
-        <Button type="primary">Primary button</Button>
-        <Button type="transparent">Transparent button</Button>
       </Card>
     </>
   );

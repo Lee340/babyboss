@@ -20,10 +20,10 @@ export function Navbar({ user }) {
       </div>
 
       <Button>
-        <Icon color="subtle" size="l" icon={faMagnifyingGlass} />
+        <Icon color="brand" size="l" icon={faMagnifyingGlass} />
       </Button>
       <Button>
-        <Icon color="subtle" size="l" icon={faBasketShopping} />
+        <Icon color="brand" size="l" icon={faBasketShopping} />
       </Button>
 
       <Button

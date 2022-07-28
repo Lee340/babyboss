@@ -13,14 +13,29 @@
   transform: scale(1.025);
 }
 
-.btn-subtle {
-  color: var(--primary-color);
-  background-color: var(--subtle-color);
+.btn-brand {
+  background-color: var(--brand-color);
+  color: var(--subtle-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--subtle-color);
 }
 
 .btn-secondary {
-  color: var(--light-color);
   background-color: var(--secondary-color);
+  color: var(--light-color);
+}
+
+.btn-subtle {
+  background-color: var(--subtle-color);
+  color: var(--primary-color);
+}
+
+.btn-light {
+  background-color: var(--light-color);
+  color: var(--primary-color);
 }
 
 .btn-transparent {

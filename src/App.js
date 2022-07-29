@@ -3,7 +3,6 @@ import { ShopRoute } from "./ShopRoute";
 import { Button } from "./Button";
 import { HomeRoute } from "./HomeRoute";
 import { Navbar } from "./Navbar";
-import { loginWithGoogle } from "./Authentication";
 
 function App() {
   const [route, setRoute] = useState("home");
@@ -13,26 +12,7 @@ function App() {
 
   return (
     <>
-      <Navbar user={user} />
-      <Button
-        onClick={() => {
-          setRoute("home");
-        }}
-      >
-        Home
-      </Button>
-      <Button
-        onClick={() => {
-          setRoute("shop");
-        }}
-      >
-        Shop
-      </Button>
-      {user == null ? (
-        <Button onClick={() => loginWithGoogle(setUser)}>
-          Login with Google
-        </Button>
-      ) : null}
+      <Navbar setUser={setUser} user={user} />
       {route === "home" ? <HomeRoute /> : null}
       {route === "shop" ? <ShopRoute /> : null}
     </>

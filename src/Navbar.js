@@ -4,8 +4,9 @@ import { Text } from "./Text";
 import { Icon } from "./Icon";
 import "./Navbar.css";
 import { Button } from "./Button";
+import { loginWithGoogle } from "./Authentication";
 
-export function Navbar({ user }) {
+export function Navbar({ user, setUser }) {
   const [show, setShow] = useState(false);
 
   return (
@@ -37,7 +38,9 @@ export function Navbar({ user }) {
             alt="user profile"
             className="user-profile"
           />
-        ) : null}
+        ) : (
+          <Button onClick={() => loginWithGoogle(setUser)}>Login</Button>
+        )}
         <div className="dropdown_list">
           {show && (
             <div id="courses_id" className="courses">

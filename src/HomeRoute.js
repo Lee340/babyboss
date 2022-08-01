@@ -9,6 +9,8 @@ import { Marker } from "react-leaflet/Marker";
 import { Popup } from "react-leaflet/Popup";
 import { TileLayer } from "react-leaflet/TileLayer";
 
+// import { getDatabase } from "firebase/database";
+
 import "./HomeRoute.css";
 
 // const db = getDatabase(app);

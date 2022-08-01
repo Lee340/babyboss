@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ShopRoute } from "./ShopRoute";
-import { Button } from "./Button";
 import { HomeRoute } from "./HomeRoute";
 import { Navbar } from "./Navbar";
 

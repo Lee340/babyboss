@@ -25,7 +25,9 @@ export function Navbar({ user, setUser }) {
       <Button
         className="dropdown_button"
         onClick={() => {
-          if (show) {
+          if (user == null) {
+            loginWithGoogle(setUser);
+          } else if (show) {
             setShow(false);
           } else {
             setShow(true);
@@ -39,7 +41,7 @@ export function Navbar({ user, setUser }) {
             className="user-profile"
           />
         ) : (
-          <Button onClick={() => loginWithGoogle(setUser)}>Login</Button>
+          <Text>Login</Text>
         )}
         <div className="dropdown_list">
           {show && (

@@ -10,10 +10,6 @@ import { Card } from "./Card";
 import { Icon } from "./Icon";
 import "./HomeRoute.css";
 
-document.createElement('a')
-<span>1234</span>
-document.createTextNode('1234') // 1234
-
 export function Tab({ selectedTab, setSelectedTab }) {
   return (
     <>

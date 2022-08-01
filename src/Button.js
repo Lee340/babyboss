@@ -2,11 +2,11 @@ import classNames from "classnames";
 
 import "./Button.css";
 
-export function Button({ children, onClick, type }) {
+export function Button({ children, onClick, type, className }) {
   return (
     <button
       onClick={onClick}
-      className={classNames("btn", {
+      className={classNames("btn", className, {
         "btn-brand": type === "brand",
         "btn-primary": type === "primary",
         "btn-secondary": type === "secondary",

@@ -1,75 +1,42 @@
-import { useEffect, useState } from "react";
-import { getDatabase, ref, set, onValue } from "firebase/database";
-import {
-  faUtensils,
-  faDemocrat,
-  faBicycle,
-  faPersonSwimming,
-  faFlag,
-  faCoffee,
-  faStar,
-} from "@fortawesome/free-solid-svg-icons";
-import { Button } from "./Button";
+import { useState } from "react";
+import { faCoffee, faStar } from "@fortawesome/free-solid-svg-icons";
 import { Card } from "./Card";
+import { Tab } from "./Tab";
 import { Text } from "./Text";
-import { app } from "./FirebaseApp";
 import { Icon } from "./Icon";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { Marker } from "react-leaflet/Marker";
 import { Popup } from "react-leaflet/Popup";
 import { TileLayer } from "react-leaflet/TileLayer";
-import { useMap } from "react-leaflet/hooks";
 
 import "./HomeRoute.css";
 
-const db = getDatabase(app);
+// const db = getDatabase(app);
 
-function writeUserData(userId, name, email, imageUrl) {
-  set(ref(db, "users/" + userId), {
-    username: name,
-    email: email,
-    profile_picture: imageUrl,
-  });
-}
-
-let initialized = false;
+// function writeUserData(userId, name, email, imageUrl) {
+//   set(ref(db, "users/" + userId), {
+//     username: name,
+//     email: email,
+//     profile_picture: imageUrl,
+//   });
+// }
 
 export function HomeRoute() {
-  const [users, setUsers] = useState([]);
+  // const [users, setUsers] = useState([]);
+  const [selectedTab, setSelectedTab] = useState(null);
 
-  useEffect(() => {
-    const db = getDatabase();
-    const usersRef = ref(db, "users/");
-    onValue(usersRef, (snapshot) => {
-      const data = snapshot.val();
-      setUsers(Object.values(data));
-    });
-  }, []);
+  // useEffect(() => {
+  //   const db = getDatabase();
+  //   const usersRef = ref(db, "users/");
+  //   onValue(usersRef, (snapshot) => {
+  //     const data = snapshot.val();
+  //     setUsers(Object.values(data));
+  //   });
+  // }, []);
 
   return (
     <>
-      <Card color="light" className="main-tabselector">
-        <Button type="light">
-          Brunch&nbsp;&nbsp;
-          <Icon size="l" icon={faUtensils} />
-        </Button>
-        <Button type="light">
-          Softplay&nbsp;&nbsp;
-          <Icon size="l" icon={faDemocrat} />
-        </Button>
-        <Button type="light">
-          Park&nbsp;&nbsp;
-          <Icon size="l" icon={faBicycle} />
-        </Button>
-        <Button type="light">
-          Pool&nbsp;&nbsp;
-          <Icon size="l" icon={faPersonSwimming} />
-        </Button>
-        <Button type="light">
-          Event Venue&nbsp;&nbsp;
-          <Icon size="l" icon={faFlag} />
-        </Button>
-      </Card>
+      <Tab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <div className="list-map-container">
         <div className="list">
           <Card color="subtle" className="list-item">

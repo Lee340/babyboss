@@ -40,3 +40,7 @@
   width: 150px;
   flex-shrink: 0;
 }
+
+.selected-tab {
+  background-color: blue;
+}

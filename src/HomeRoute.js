@@ -12,6 +12,7 @@ import { TileLayer } from "react-leaflet/TileLayer";
 // import { getDatabase } from "firebase/database";
 
 import "./HomeRoute.css";
+import { Button } from "./Button";
 
 // const db = getDatabase(app);
 
@@ -23,7 +24,7 @@ import "./HomeRoute.css";
 //   });
 // }
 
-export function HomeRoute() {
+export function HomeRoute({ setRoute }) {
   // const [users, setUsers] = useState([]);
   const [selectedTab, setSelectedTab] = useState(null);
 
@@ -62,6 +63,14 @@ export function HomeRoute() {
           </Card>
           <Card color="subtle" className="list-item">
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
+            <Button
+              onClick={() => {
+                setRoute({ type: "review", id: 1234 });
+              }}
+              type="primary"
+            >
+              Go to review
+            </Button>
             Restaurant 2
           </Card>
           <Card color="subtle" className="list-item">

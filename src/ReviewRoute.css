@@ -1,0 +1,25 @@
+input {
+  width: 100%;
+  display: inline-block;
+  padding: var(--spacing-s);
+  margin: var(--spacing-s) 0;
+  border: 1px solid var(--subtle-color);
+  background-color: var(--light-color);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.review-selector {
+  display: grid;
+  grid-template-rows: auto;
+  margin-top: 16px;
+}
+
+.review-selector-details {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+  margin-top: 8px;
+
+}

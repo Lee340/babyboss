@@ -15,7 +15,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
 
   return (
     <div>
-      <Card color="subtle">
+      <Card className="review-card" color="subtle">
         <div className="review-restaurant-name">
           <Text size="l" color="primary">
             {name}
@@ -51,45 +51,43 @@ export function ReviewRoute({ user, setUser, id, name }) {
             <Button type="primary">Login</Button>
           )}
         </div>
-        <Button className="review-stars">
-          <Icon icon={faStar} />
-        </Button>
-        <Button>
-          <Icon icon={faStar} />
-        </Button>{" "}
-        <Button>
-          <Icon icon={faStar} />
-        </Button>{" "}
-        <Button>
-          <Icon icon={faStar} />
-        </Button>{" "}
-        <Button>
-          <Icon icon={faStar} />
-        </Button>
+        <div className="review-stars">
+          <Button>
+            <Icon icon={faStar} />
+          </Button>
+          <Button>
+            <Icon icon={faStar} />
+          </Button>{" "}
+          <Button>
+            <Icon icon={faStar} />
+          </Button>{" "}
+          <Button>
+            <Icon icon={faStar} />
+          </Button>{" "}
+          <Button>
+            <Icon icon={faStar} />
+          </Button>
+        </div>
         <form
           action=""
           method="get"
           className="review-content"
           onSubmit={(e) => {}}
         >
-          <div>
-            <label htmlFor="review" />
-            <textarea
-              type="text"
-              className="review-text"
-              placeholder="Share your experience as parents at this place"
-              required
-              value={review}
-              onChange={(e) => setReview(e.target.value)}
-            ></textarea>
-          </div>
-          <div className="review-add-photo">
-            <FileInput
-              onChange={(e) => {
-                setSelectedFile(e.target.files[0]);
-              }}
-            />
-          </div>
+          <textarea
+            type="text"
+            className="review-text"
+            placeholder="Share your experience as parents at this place"
+            required
+            value={review}
+            onChange={(e) => setReview(e.target.value)}
+          ></textarea>
+          <FileInput
+            className="review-add-photo"
+            onChange={(e) => {
+              setSelectedFile(e.target.files[0]);
+            }}
+          />
         </form>
         <div className="review-selector">
           <p>What is your child(ren)'s age range?</p>

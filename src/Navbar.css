@@ -1,6 +1,5 @@
 
 .navbar {
-  border-bottom: 1px solid var(--brand-color);
   padding-top: var(--spacing-m);
   padding-bottom: var(--spacing-m);
   padding-left: var(--spacing-m);

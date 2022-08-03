@@ -23,3 +23,18 @@ input {
   margin-top: 8px;
 
 }
+
+.review-submit {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--brand-color);
+}

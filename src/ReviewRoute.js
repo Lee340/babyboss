@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Text } from "./Text";
 import { Card } from "./Card";
 import { Button } from "./Button";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { Text } from "./Text";
+import { faLinesLeaning, faStar } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "./Icon";
+import { Navbar } from "./Navbar";
 import "./ReviewRoute.css";
+import { loginWithGoogle } from "./Authentication";
 
-export function ReviewRoute({ user, setUser }) {
-  const [show, setShow] = useState(true);
+export function ReviewRoute({ user, setUser, id }) {
+  const [show, setShow] = useState(false);
   const [review, setReview] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
 
@@ -15,33 +17,45 @@ export function ReviewRoute({ user, setUser }) {
     <div>
       <Card color="subtle">
         <div>
-          {user != null ? (
-            <img
-              src={user.photoURL}
-              alt="user profile"
-              className="user-profile"
-            />
-          ) : (
-            <Button type="primary">Login</Button>
-          )}
+          <Button
+            type="primary"
+            className="review-login"
+            onClick={() => {
+              if (user == null) {
+                loginWithGoogle(setUser);
+              } else if (show) {
+                setShow(false);
+              } else {
+                setShow(true);
+              }
+            }}
+          >
+            {user != null ? (
+              <img
+                src={user.photoURL}
+                alt="user profile"
+                className="user-profile"
+              />
+            ) : (
+              <Text>Login</Text>
+            )}
+          </Button>
         </div>
-        <span>
-          <Button>
-            <Icon icon={faStar} />
-          </Button>
-          <Button>
-            <Icon icon={faStar} />
-          </Button>{" "}
-          <Button>
-            <Icon icon={faStar} />
-          </Button>{" "}
-          <Button>
-            <Icon icon={faStar} />
-          </Button>{" "}
-          <Button>
-            <Icon icon={faStar} />
-          </Button>
-        </span>
+        <Button className="review-stars">
+          <Icon icon={faStar} />
+        </Button>
+        <Button>
+          <Icon icon={faStar} />
+        </Button>{" "}
+        <Button>
+          <Icon icon={faStar} />
+        </Button>{" "}
+        <Button>
+          <Icon icon={faStar} />
+        </Button>{" "}
+        <Button>
+          <Icon icon={faStar} />
+        </Button>
         <form
           action=""
           method="get"
@@ -102,8 +116,10 @@ export function ReviewRoute({ user, setUser }) {
             <Button type="border">Over £60</Button>
           </div>
         </div>
-        <Button type="border">Cancel</Button>
-        <Button type="primary">Post</Button>
+        <div className="review-submit">
+          <Button type="border">Cancel</Button>
+          <Button type="primary">Post</Button>
+        </div>
       </Card>
     </div>
   );

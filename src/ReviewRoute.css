@@ -1,12 +1,39 @@
-input {
-  width: 100%;
-  display: inline-block;
-  padding: var(--spacing-s);
-  margin: var(--spacing-s) 0;
-  border: 1px solid var(--subtle-color);
+.review-restaurant-name {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+
+.review-login {
+  display: flex;
+}
+
+.review-id {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+
+.review-content {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 16px;
+}
+
+.review-text {
   background-color: var(--light-color);
-  border-radius: 2px;
-  box-sizing: border-box;
+  border: 1px solid var(--primary-color);
+  min-height: 80px;
+  min-width: 90%;
+  margin-top: 8px;
+  padding: 16px;
+}
+
+.review-add-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .review-selector {
@@ -21,20 +48,10 @@ input {
   justify-content: flex-start;
   margin-bottom: 16px;
   margin-top: 8px;
-
 }
 
 .review-submit {
   display: flex;
   justify-content: flex-end;
   gap: 8px;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid var(--brand-color);
 }

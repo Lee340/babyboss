@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Card } from "./Card";
 import { Button } from "./Button";
 import { Text } from "./Text";
-import { faLinesLeaning, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "./Icon";
-import { Navbar } from "./Navbar";
 import "./ReviewRoute.css";
 import { loginWithGoogle } from "./Authentication";
+import { FileInput } from "./FileInput";
 
-export function ReviewRoute({ user, setUser, id }) {
+export function ReviewRoute({ user, setUser, id, name }) {
   const [show, setShow] = useState(false);
   const [review, setReview] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
@@ -16,30 +16,40 @@ export function ReviewRoute({ user, setUser, id }) {
   return (
     <div>
       <Card color="subtle">
-        <div>
-          <Button
-            type="primary"
-            className="review-login"
-            onClick={() => {
-              if (user == null) {
-                loginWithGoogle(setUser);
-              } else if (show) {
-                setShow(false);
-              } else {
-                setShow(true);
-              }
-            }}
-          >
-            {user != null ? (
+        <div className="review-restaurant-name">
+          <Text size="l" color="primary">
+            {name}
+          </Text>
+        </div>
+        <div
+          className="review-login"
+          onClick={() => {
+            if (user == null) {
+              loginWithGoogle(setUser);
+            } else if (show) {
+              setShow(false);
+            } else {
+              setShow(true);
+            }
+          }}
+        >
+          {user != null ? (
+            <>
               <img
                 src={user.photoURL}
                 alt="user profile"
                 className="user-profile"
               />
-            ) : (
-              <Text>Login</Text>
-            )}
-          </Button>
+              <div className="review-id">
+                <Text bold={true} size="m" color="primary">
+                  {user.displayName}
+                </Text>
+                <Text size="s">Posting publicly</Text>
+              </div>
+            </>
+          ) : (
+            <Button type="primary">Login</Button>
+          )}
         </div>
         <Button className="review-stars">
           <Icon icon={faStar} />
@@ -59,22 +69,22 @@ export function ReviewRoute({ user, setUser, id }) {
         <form
           action=""
           method="get"
-          className="add-review"
+          className="review-content"
           onSubmit={(e) => {}}
         >
-          <div className="artists-add-art-row">
-            <label htmlFor="review">Review</label>
-            <input
+          <div>
+            <label htmlFor="review" />
+            <textarea
               type="text"
+              className="review-text"
               placeholder="Share your experience as parents at this place"
               required
               value={review}
               onChange={(e) => setReview(e.target.value)}
-            ></input>
+            ></textarea>
           </div>
-          <div>
-            <input
-              type="file"
+          <div className="review-add-photo">
+            <FileInput
               onChange={(e) => {
                 setSelectedFile(e.target.files[0]);
               }}

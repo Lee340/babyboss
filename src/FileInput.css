@@ -1,0 +1,11 @@
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  border: 1px solid var(--primary-color);
+  border-radius: 32px;
+  cursor: pointer;
+  padding: var(--spacing-s) 30vw;
+}

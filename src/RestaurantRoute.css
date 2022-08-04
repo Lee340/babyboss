@@ -1,0 +1,24 @@
+.restaurant-head {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--spacing-m);
+  align-items: center;
+  margin-bottom: var(--spacing-l);
+}
+
+.restaurant-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+}
+
+.restaurant-review-stars {
+  display: flex;
+  gap: var(--spacing-m);
+}
+
+.restaurant-review-icons {
+  display: flex;
+  gap: var(--spacing-m);
+}

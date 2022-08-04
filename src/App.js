@@ -3,6 +3,7 @@ import { ShopRoute } from "./ShopRoute";
 import { HomeRoute } from "./HomeRoute";
 import { Navbar } from "./Navbar";
 import { ReviewRoute } from "./ReviewRoute";
+import { RestaurantRoute } from "./RestaurantRoute";
 
 function App() {
   const [route, setRoute] = useState({ type: "home" });
@@ -21,6 +22,7 @@ function App() {
           name="Tanakatsu"
         />
       ) : null}
+      {route.type === "restaurant" ? <RestaurantRoute /> : null}
     </>
   );
 }

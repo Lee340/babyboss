@@ -42,7 +42,7 @@ export function HomeRoute({ setRoute }) {
       <Tab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <div className="list-map-container">
         <div className="list">
-          <Card color="subtle" className="list-item">
+          <Button color="subtle" className="list-item">
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
             <div className="list-item-content">
               <Text color="primary" size="l">
@@ -60,31 +60,39 @@ export function HomeRoute({ setRoute }) {
                 </Text>
               </div>
             </div>
-          </Card>
-          <Card color="subtle" className="list-item">
+          </Button>
+          <Button color="subtle" className="list-item">
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
             <Button
               onClick={() => {
                 setRoute({ type: "review", id: 1234 });
               }}
-              type="primary"
+              color="primary"
+            >
+              Leave review
+            </Button>
+            Restaurant 2
+          </Button>
+          <Button color="subtle" className="list-item">
+            <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
+            <Button
+              onClick={() => {
+                setRoute({ type: "restaurant" });
+              }}
+              color="primary"
             >
               Go to review
             </Button>
-            Restaurant 2
-          </Card>
-          <Card color="subtle" className="list-item">
-            <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
             Restaurant 3
-          </Card>
-          <Card color="subtle" className="list-item">
+          </Button>
+          <Button color="subtle" className="list-item">
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
             Restaurant 4
-          </Card>
-          <Card color="subtle" className="list-item">
+          </Button>
+          <Button color="subtle" className="list-item">
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
             Restaurant 5
-          </Card>
+          </Button>
         </div>
 
         <MapContainer

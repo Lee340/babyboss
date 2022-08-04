@@ -55,7 +55,6 @@ export function Tab({ selectedTab, setSelectedTab }) {
           <Icon size="l" icon={faFlag} />
         </Button>
       </Card>
-      ;
     </>
   );
 }

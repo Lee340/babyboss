@@ -2,19 +2,19 @@ import classNames from "classnames";
 
 import "./Button.css";
 
-export function Button({ children, onClick, type, className }) {
+export function Button({ children, onClick, color, className }) {
   return (
     <button
       onClick={onClick}
       className={classNames("btn", className, {
-        "btn-brand": type === "brand",
-        "btn-primary": type === "primary",
-        "btn-secondary": type === "secondary",
-        "btn-subtle": type === "subtle",
-        "btn-light": type === "light",
-        "btn-round": type === "round",
-        "btn-border": type === "border",
-        "btn-transparent": type === "transparent" || type == null,
+        "btn-brand": color === "brand",
+        "btn-primary": color === "primary",
+        "btn-secondary": color === "secondary",
+        "btn-subtle": color === "subtle",
+        "btn-light": color === "light",
+        "btn-round": color === "round",
+        "btn-border": color === "border",
+        "btn-transparent": color === "transparent" || color == null,
       })}
     >
       {children}

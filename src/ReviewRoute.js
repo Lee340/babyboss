@@ -48,7 +48,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
               </div>
             </>
           ) : (
-            <Button type="primary">Login</Button>
+            <Button color="primary">Login</Button>
           )}
         </div>
         <div className="review-stars">
@@ -92,41 +92,41 @@ export function ReviewRoute({ user, setUser, id, name }) {
         <div className="review-selector">
           <p>What is your child(ren)'s age range?</p>
           <div className="review-selector-details">
-            <Button type="border">0-1yr</Button>
-            <Button type="border">1-3yr</Button>
-            <Button type="border">3-5yr</Button>
-            <Button type="border">5-10yr</Button>
-            <Button type="border">Over 10yr</Button>
+            <Button color="border">0-1yr</Button>
+            <Button color="border">1-3yr</Button>
+            <Button color="border">3-5yr</Button>
+            <Button color="border">5-10yr</Button>
+            <Button color="border">Over 10yr</Button>
           </div>
 
           <p>Did you dine in, take out, or get delivery?</p>
           <div className="review-selector-details">
-            <Button type="border">Dine in</Button>
-            <Button type="border">Take out</Button>
-            <Button type="border">Delivery</Button>
+            <Button color="border">Dine in</Button>
+            <Button color="border">Take out</Button>
+            <Button color="border">Delivery</Button>
           </div>
 
           <p>What did you get?</p>
           <div className="review-selector-details">
-            <Button type="border">Breakfast</Button>
-            <Button type="border">Brunch</Button>
-            <Button type="border">Lunch</Button>
-            <Button type="border">Dinner</Button>
-            <Button type="border">Other</Button>
+            <Button color="border">Breakfast</Button>
+            <Button color="border">Brunch</Button>
+            <Button color="border">Lunch</Button>
+            <Button color="border">Dinner</Button>
+            <Button color="border">Other</Button>
           </div>
 
           <p>How much did you spend per person?</p>
           <div className="review-selector-details">
-            <Button type="border">£1-10</Button>
-            <Button type="border">£10-20</Button>
-            <Button type="border">£20-40</Button>
-            <Button type="border">£40-60</Button>
-            <Button type="border">Over £60</Button>
+            <Button color="border">£1-10</Button>
+            <Button color="border">£10-20</Button>
+            <Button color="border">£20-40</Button>
+            <Button color="border">£40-60</Button>
+            <Button color="border">Over £60</Button>
           </div>
         </div>
         <div className="review-submit">
-          <Button type="border">Cancel</Button>
-          <Button type="primary">Post</Button>
+          <Button color="border">Cancel</Button>
+          <Button color="primary">Post</Button>
         </div>
       </Card>
     </div>

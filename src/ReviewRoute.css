@@ -8,7 +8,6 @@
   padding-bottom: 16px;
 }
 
-
 .review-login {
   display: flex;
 }
@@ -24,6 +23,7 @@
   justify-content: center;
   margin-bottom: var(--spacing-l);
 }
+
 .review-content {
  display: flex;
  flex-direction: column;

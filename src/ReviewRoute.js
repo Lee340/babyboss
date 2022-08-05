@@ -12,6 +12,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
   const [show, setShow] = useState(false);
   const [review, setReview] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
+  const [stars, setStars] = useState(null);
   const [ageSelection, setAgeSelection] = useState(null);
   const [orderTypeSelection, setOrderTypeSelection] = useState(null);
   const [mealSelection, setMealSelection] = useState(null);
@@ -56,19 +57,34 @@ export function ReviewRoute({ user, setUser, id, name }) {
           )}
         </div>
         <div className="review-stars">
-          <Button>
-            <Icon icon={faStar} />
-          </Button>
-          <Button>
-            <Icon icon={faStar} />
-          </Button>{" "}
-          <Button>
+          <Button
+            className={stars < 1 ? "faded" : null}
+            onClick={() => setStars(1)}
+          >
             <Icon icon={faStar} />
           </Button>{" "}
-          <Button>
+          <Button
+            className={stars < 2 ? "faded" : null}
+            onClick={() => setStars(2)}
+          >
             <Icon icon={faStar} />
           </Button>{" "}
-          <Button>
+          <Button
+            className={stars < 3 ? "faded" : null}
+            onClick={() => setStars(3)}
+          >
+            <Icon icon={faStar} />
+          </Button>{" "}
+          <Button
+            className={stars < 4 ? "faded" : null}
+            onClick={() => setStars(4)}
+          >
+            <Icon icon={faStar} />
+          </Button>{" "}
+          <Button
+            className={stars < 5 ? "faded" : null}
+            onClick={() => setStars(5)}
+          >
             <Icon icon={faStar} />
           </Button>
         </div>

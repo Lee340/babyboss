@@ -40,3 +40,7 @@ input {
   --light-color: #F3E9D2;
   --border-radius: 4px;
 }
+
+.faded {
+  opacity: 0.2;
+}

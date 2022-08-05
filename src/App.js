@@ -9,6 +9,19 @@ function App() {
   const [route, setRoute] = useState({ type: "home" });
   const [user, setUser] = useState(null);
 
+  // const location = new window.google.maps.LatLng(-33.8665433, 151.1956316);
+  // const service = new window.google.maps.places.PlacesService(null);
+  // service.textSearch(
+  //   {
+  //     location,
+  //     radius: "500",
+  //     query: "restaurant",
+  //   },
+  //   (result) => {
+  //     console.log({ result });
+  //   }
+  // );
+
   return (
     <>
       <Navbar setUser={setUser} user={user} />
@@ -22,7 +35,14 @@ function App() {
           name="Tanakatsu"
         />
       ) : null}
-      {route.type === "restaurant" ? <RestaurantRoute /> : null}
+      {route.type === "restaurant" ? (
+        <RestaurantRoute
+          id={route.id}
+          setUser={setUser}
+          user={user}
+          name="Tanakatsu"
+        />
+      ) : null}
     </>
   );
 }

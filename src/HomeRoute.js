@@ -61,38 +61,34 @@ export function HomeRoute({ setRoute }) {
               </div>
             </div>
           </Button>
-          <Button color="subtle" className="list-item">
+          <Button
+            onClick={() => {
+              setRoute({ type: "review", id: 1234 });
+            }}
+            color="subtle"
+            className="list-item"
+          >
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
-            <Button
-              onClick={() => {
-                setRoute({ type: "review", id: 1234 });
-              }}
-              color="primary"
-            >
-              Leave review
-            </Button>
-            Restaurant 2
+            Leave review Restaurant 2
           </Button>
-          <Button color="subtle" className="list-item">
+          <Button
+            onClick={() => {
+              setRoute({ type: "restaurant" });
+            }}
+            color="subtle"
+            className="list-item"
+          >
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
-            <Button
-              onClick={() => {
-                setRoute({ type: "restaurant" });
-              }}
-              color="primary"
-            >
-              Go to review
-            </Button>
-            Restaurant 3
+            Go to review Restaurant 3
           </Button>
-          <Button color="subtle" className="list-item">
+          <div color="subtle" className="list-item">
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
             Restaurant 4
-          </Button>
-          <Button color="subtle" className="list-item">
+          </div>
+          <div color="subtle" className="list-item">
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
             Restaurant 5
-          </Button>
+          </div>
         </div>
 
         <MapContainer

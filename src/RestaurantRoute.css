@@ -1,4 +1,21 @@
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+}
+
 .restaurant-head {
+  display: flex;
+
+}
+
+.restaurant-stars {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+}
+
+.restaurant-review-head {
   display: grid;
   grid-template-columns: 1fr auto auto;
   gap: var(--spacing-m);
@@ -15,6 +32,7 @@
 
 .restaurant-review-stars {
   display: flex;
+  align-items: center;
   gap: var(--spacing-m);
 }
 

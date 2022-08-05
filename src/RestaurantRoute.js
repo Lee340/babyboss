@@ -7,10 +7,8 @@ import {
   faMagnifyingGlass,
   faBarsProgress,
   faThumbsUp,
-  faThumbsDown,
-  faShare,
-  faShareSquare,
   faShareNodes,
+  faRoad,
 } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "./Icon";
 import "./RestaurantRoute.css";
@@ -23,6 +21,31 @@ export function RestaurantRoute({ user, setUser, id, name }) {
     <div>
       <Card className="restaurant-card" color="subtle">
         <div className="restaurant-head">
+          <Text className="restaurant-name" size="l" color="primary">
+            {name}
+          </Text>
+          <div className="restaurant-stars">
+            <Text size="m" color="primary">
+              4
+            </Text>
+            <Icon size="s" icon={faStar} />
+            <Icon size="s" icon={faStar} />
+            <Icon size="s" icon={faStar} />
+            <Icon size="s" icon={faStar} />
+            <Icon size="s" icon={faStar} />
+            <Text size="m" color="primary">
+              10 reviews
+            </Text>
+          </div>
+          <Button color="border">
+            <Icon icon={faRoad} />
+          </Button>
+          <Button color="border">
+            <Icon icon={faShareNodes} />
+          </Button>
+        </div>
+
+        <div className="restaurant-review-head">
           <Text size="l" color="primary">
             Reviews
           </Text>

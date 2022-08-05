@@ -114,41 +114,62 @@ export function ReviewRoute({ user, setUser, id, name }) {
           <div className="review-selector-details">
             <Button
               onClick={() => {
-                setAgeSelection("0");
+                if (ageSelection === 0) {
+                  setAgeSelection(null);
+                } else {
+                  setAgeSelection(0);
+                }
               }}
-              color={ageSelection === "0" ? "primary" : "border"}
+              color={ageSelection === 0 ? "primary" : "border"}
             >
               0-1yr
             </Button>
+
             <Button
               onClick={() => {
-                setAgeSelection("1");
+                if (ageSelection === 1) {
+                  setAgeSelection(null);
+                } else {
+                  setAgeSelection(1);
+                }
               }}
-              color={ageSelection === "1" ? "primary" : "border"}
+              color={ageSelection === 1 ? "primary" : "border"}
             >
               1-3yr
             </Button>
             <Button
               onClick={() => {
-                setAgeSelection("3");
+                if (ageSelection === 2) {
+                  setAgeSelection(null);
+                } else {
+                  setAgeSelection(2);
+                }
               }}
-              color={ageSelection === "3" ? "primary" : "border"}
+              color={ageSelection === 2 ? "primary" : "border"}
             >
               3-5yr
             </Button>
             <Button
               onClick={() => {
-                setAgeSelection("5");
+                if (ageSelection === 3) {
+                  setAgeSelection(null);
+                } else {
+                  setAgeSelection(3);
+                }
               }}
-              color={ageSelection === "5" ? "primary" : "border"}
+              color={ageSelection === 3 ? "primary" : "border"}
             >
               5-10yr
             </Button>
             <Button
               onClick={() => {
-                setAgeSelection("10");
+                if (ageSelection === 4) {
+                  setAgeSelection(null);
+                } else {
+                  setAgeSelection(4);
+                }
               }}
-              color={ageSelection === "10" ? "primary" : "border"}
+              color={ageSelection === 4 ? "primary" : "border"}
             >
               Over 10yr
             </Button>
@@ -157,20 +178,38 @@ export function ReviewRoute({ user, setUser, id, name }) {
           <p>Did you dine in, take out, or get delivery?</p>
           <div className="review-selector-details">
             <Button
-              onClick={() => setOrderTypeSelection("0")}
-              color={orderTypeSelection === "0" ? "primary" : "border"}
+              onClick={() => {
+                if (orderTypeSelection === 0) {
+                  setOrderTypeSelection(null);
+                } else {
+                  setOrderTypeSelection(0);
+                }
+              }}
+              color={orderTypeSelection === 0 ? "primary" : "border"}
             >
               Dine in
             </Button>
             <Button
-              onClick={() => setOrderTypeSelection("1")}
-              color={orderTypeSelection === "1" ? "primary" : "border"}
+              onClick={() => {
+                if (orderTypeSelection === 1) {
+                  setOrderTypeSelection(null);
+                } else {
+                  setOrderTypeSelection(1);
+                }
+              }}
+              color={orderTypeSelection === 1 ? "primary" : "border"}
             >
               Take out
             </Button>
             <Button
-              onClick={() => setOrderTypeSelection("2")}
-              color={orderTypeSelection === "2" ? "primary" : "border"}
+              onClick={() => {
+                if (orderTypeSelection === 2) {
+                  setOrderTypeSelection(null);
+                } else {
+                  setOrderTypeSelection(2);
+                }
+              }}
+              color={orderTypeSelection === 2 ? "primary" : "border"}
             >
               Delivery
             </Button>
@@ -180,41 +219,61 @@ export function ReviewRoute({ user, setUser, id, name }) {
           <div className="review-selector-details">
             <Button
               onClick={() => {
-                setMealSelection("0");
+                if (mealSelection === 0) {
+                  setMealSelection(null);
+                } else {
+                  setMealSelection(0);
+                }
               }}
-              color={mealSelection === "0" ? "primary" : "border"}
+              color={mealSelection === 0 ? "primary" : "border"}
             >
               Breakfast
             </Button>
             <Button
               onClick={() => {
-                setMealSelection("1");
+                if (mealSelection === 1) {
+                  setMealSelection(null);
+                } else {
+                  setMealSelection(1);
+                }
               }}
-              color={mealSelection === "1" ? "primary" : "border"}
+              color={mealSelection === 1 ? "primary" : "border"}
             >
               Brunch
             </Button>
             <Button
               onClick={() => {
-                setMealSelection("2");
+                if (mealSelection === 2) {
+                  setMealSelection(null);
+                } else {
+                  setMealSelection(2);
+                }
               }}
-              color={mealSelection === "2" ? "primary" : "border"}
+              color={mealSelection === 2 ? "primary" : "border"}
             >
               Lunch
             </Button>
             <Button
               onClick={() => {
-                setMealSelection("3");
+                if (mealSelection === 3) {
+                  setMealSelection(null);
+                } else {
+                  setMealSelection(3);
+                }
               }}
-              color={mealSelection === "3" ? "primary" : "border"}
+              color={mealSelection === 3 ? "primary" : "border"}
             >
               Dinner
             </Button>
             <Button
               onClick={() => {
-                setMealSelection("4");
+                if (mealSelection === 4) {
+                  setMealSelection(null);
+                } else {
+                  setMealSelection(4);
+                }
               }}
-              color={mealSelection === "4" ? "primary" : "border"}
+              color={mealSelection === 4 ? "primary" : "border"}
             >
               Other
             </Button>
@@ -224,41 +283,61 @@ export function ReviewRoute({ user, setUser, id, name }) {
           <div className="review-selector-details">
             <Button
               onClick={() => {
-                setPriceSelection("1");
+                if (priceSelection === 0) {
+                  setPriceSelection(null);
+                } else {
+                  setPriceSelection(0);
+                }
               }}
-              color={priceSelection === "1" ? "primary" : "border"}
+              color={priceSelection === 0 ? "primary" : "border"}
             >
               £1-10
             </Button>
             <Button
               onClick={() => {
-                setPriceSelection("10");
+                if (priceSelection === 1) {
+                  setPriceSelection(null);
+                } else {
+                  setPriceSelection(1);
+                }
               }}
-              color={priceSelection === "10" ? "primary" : "border"}
+              color={priceSelection === 1 ? "primary" : "border"}
             >
               £10-20
             </Button>
             <Button
               onClick={() => {
-                setPriceSelection("20");
+                if (priceSelection === 2) {
+                  setPriceSelection(null);
+                } else {
+                  setPriceSelection(2);
+                }
               }}
-              color={priceSelection === "20" ? "primary" : "border"}
+              color={priceSelection === 2 ? "primary" : "border"}
             >
               £20-40
             </Button>
             <Button
               onClick={() => {
-                setPriceSelection("40");
+                if (priceSelection === 3) {
+                  setPriceSelection(null);
+                } else {
+                  setPriceSelection(3);
+                }
               }}
-              color={priceSelection === "40" ? "primary" : "border"}
+              color={priceSelection === 3 ? "primary" : "border"}
             >
               £40-60
             </Button>
             <Button
               onClick={() => {
-                setPriceSelection("60");
+                if (priceSelection === 4) {
+                  setPriceSelection(null);
+                } else {
+                  setPriceSelection(4);
+                }
               }}
-              color={priceSelection === "60" ? "primary" : "border"}
+              color={priceSelection === 4 ? "primary" : "border"}
             >
               Over £60
             </Button>

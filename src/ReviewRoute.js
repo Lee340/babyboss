@@ -17,6 +17,11 @@ export function ReviewRoute({ user, setUser, id, name }) {
   const [orderTypeSelection, setOrderTypeSelection] = useState(null);
   const [mealSelection, setMealSelection] = useState(null);
   const [priceSelection, setPriceSelection] = useState(null);
+  const [age01, setAge01] = useState(false);
+  const [age02, setAge02] = useState(false);
+  const [age03, setAge03] = useState(false);
+  const [age04, setAge04] = useState(false);
+  const [age05, setAge05] = useState(false);
 
   return (
     <div>
@@ -114,62 +119,62 @@ export function ReviewRoute({ user, setUser, id, name }) {
           <div className="review-selector-details">
             <Button
               onClick={() => {
-                if (ageSelection === 0) {
-                  setAgeSelection(null);
+                if (age01) {
+                  setAge01(false);
                 } else {
-                  setAgeSelection(0);
+                  setAge01(true);
                 }
               }}
-              color={ageSelection === 0 ? "primary" : "border"}
+              color={age01 ? "primary" : "border"}
             >
               0-1yr
             </Button>
 
             <Button
               onClick={() => {
-                if (ageSelection === 1) {
-                  setAgeSelection(null);
+                if (age02) {
+                  setAge02(false);
                 } else {
-                  setAgeSelection(1);
+                  setAge02(true);
                 }
               }}
-              color={ageSelection === 1 ? "primary" : "border"}
+              color={age02 ? "primary" : "border"}
             >
               1-3yr
             </Button>
             <Button
               onClick={() => {
-                if (ageSelection === 2) {
-                  setAgeSelection(null);
+                if (age03) {
+                  setAge03(false);
                 } else {
-                  setAgeSelection(2);
+                  setAge03(true);
                 }
               }}
-              color={ageSelection === 2 ? "primary" : "border"}
+              color={age03 ? "primary" : "border"}
             >
               3-5yr
             </Button>
             <Button
               onClick={() => {
-                if (ageSelection === 3) {
-                  setAgeSelection(null);
+                if (age04) {
+                  setAge04(false);
                 } else {
-                  setAgeSelection(3);
+                  setAge04(true);
                 }
               }}
-              color={ageSelection === 3 ? "primary" : "border"}
+              color={age04 ? "primary" : "border"}
             >
               5-10yr
             </Button>
             <Button
               onClick={() => {
-                if (ageSelection === 4) {
-                  setAgeSelection(null);
+                if (age05) {
+                  setAge05(false);
                 } else {
-                  setAgeSelection(4);
+                  setAge05(true);
                 }
               }}
-              color={ageSelection === 4 ? "primary" : "border"}
+              color={age05 ? "primary" : "border"}
             >
               Over 10yr
             </Button>

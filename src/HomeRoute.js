@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { faCoffee, faStar } from "@fortawesome/free-solid-svg-icons";
 import { Card } from "./Card";
 import { Tab } from "./Tab";
@@ -8,13 +8,19 @@ import { MapContainer } from "react-leaflet/MapContainer";
 import { Marker } from "react-leaflet/Marker";
 import { Popup } from "react-leaflet/Popup";
 import { TileLayer } from "react-leaflet/TileLayer";
+import { Icon as LeafletIcon } from "leaflet";
 
-// import { getDatabase } from "firebase/database";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 import "./HomeRoute.css";
-import { Button } from "./Button";
 
-// const db = getDatabase(app);
+import { Button } from "./Button";
+import { app } from "./FirebaseApp";
+
+const db = getDatabase(app);
+const brunch = new LeafletIcon({
+  iconUrl:
+})
 
 // function writeUserData(userId, name, email, imageUrl) {
 //   set(ref(db, "users/" + userId), {
@@ -25,17 +31,24 @@ import { Button } from "./Button";
 // }
 
 export function HomeRoute({ setRoute }) {
-  // const [users, setUsers] = useState([]);
+  const [places, setPlaces] = useState([]);
   const [selectedTab, setSelectedTab] = useState(null);
 
-  // useEffect(() => {
-  //   const db = getDatabase();
-  //   const usersRef = ref(db, "users/");
-  //   onValue(usersRef, (snapshot) => {
-  //     const data = snapshot.val();
-  //     setUsers(Object.values(data));
-  //   });
-  // }, []);
+  useEffect(() => {
+    const placesRef = ref(db, "places/");
+    onValue(placesRef, (snapshot) => {
+      const data = snapshot.val();
+      setPlaces(Object.values(data));
+    });
+  }, []);
+
+  console.log("-----");
+  console.log(places);
+
+  if (places.length > 0) {
+    console.log(places[0].Longitude);
+    console.log(places[0].Latitude);
+  }
 
   return (
     <>
@@ -101,12 +114,15 @@ export function HomeRoute({ setRoute }) {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
             url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
           />
-          <Marker position={[51.505, -0.09]}>
-            <Popup>
-              <Icon icon={faCoffee} />
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
+
+          {places.length > 0 && (
+            <Marker position={[places[0].Latitude, places[0].Longitude]}>
+              <Popup>
+                <Icon icon={faCoffee} />
+                {A pretty CSS3 popup.} <br /> Easily customizable.
+              </Popup>
+            </Marker>
+          )}
         </MapContainer>
       </div>
     </>

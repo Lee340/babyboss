@@ -1,5 +1,6 @@
 .review-card {
   max-width: 500px;
+  padding: var(--spacing-l);
 }
 
 .review-restaurant-name {

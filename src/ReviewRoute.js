@@ -27,7 +27,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
     <div>
       <Card className="review-card" type="subtle">
         <div className="review-restaurant-name">
-          <Text size="l" color="primary">
+          <Text size="xl" color="primary">
             {name}
           </Text>
         </div>

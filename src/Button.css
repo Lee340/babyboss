@@ -48,7 +48,6 @@
 }
 
 .btn-round {
-  border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -56,4 +55,10 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
+}
+
+.btn-round-border {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 80px;
 }

@@ -2,17 +2,28 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-l);
+  max-width: 500px;
+  padding: var(--spacing-l);
 }
 
 .restaurant-head {
   display: flex;
-
+  justify-content: space-between;
+  align-content: center;
 }
 
-.restaurant-stars {
+.restaurant-head-stars {
   display: flex;
   align-items: center;
   gap: var(--spacing-s);
+  padding-top: var(--spacing-s);
+}
+
+.restaurant-head-btn {
+  display: flex;
+  align-content: center;
+  gap: var(--spacing-s);
+  flex-grow: 0;
 }
 
 .restaurant-review-head {
@@ -20,7 +31,6 @@
   grid-template-columns: 1fr auto auto;
   gap: var(--spacing-m);
   align-items: center;
-  margin-bottom: var(--spacing-l);
 }
 
 .restaurant-body {

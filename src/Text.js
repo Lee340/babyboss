@@ -8,6 +8,7 @@ export function Text({ children, size, bold, color }) {
         "text-s": size === "s",
         "text-m": size === "m" || size == null,
         "text-l": size === "l",
+        "text-xl": size === "xl",
         "text-bold": bold === true,
         "brand-color": color === "brand" || color == null,
         "primary-color": color === "primary",

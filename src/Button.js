@@ -14,6 +14,7 @@ export function Button({ children, onClick, type, className }) {
         "btn-light": type === "light",
         "btn-round": type === "round",
         "btn-border": type === "border",
+        "btn-round-border": type === "round-border",
         "btn-transparent": type === "transparent" || type == null,
       })}
     >

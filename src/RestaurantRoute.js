@@ -21,28 +21,32 @@ export function RestaurantRoute({ user, setUser, id, name }) {
     <div>
       <Card className="restaurant-card" type="subtle">
         <div className="restaurant-head">
-          <Text className="restaurant-name" size="l" color="primary">
-            {name}
-          </Text>
-          <div className="restaurant-stars">
-            <Text size="m" color="primary">
-              4
+          <div className="restaurant-head-main">
+            <Text size="xl" color="primary">
+              {name}
             </Text>
-            <Icon size="s" icon={faStar} />
-            <Icon size="s" icon={faStar} />
-            <Icon size="s" icon={faStar} />
-            <Icon size="s" icon={faStar} />
-            <Icon size="s" icon={faStar} />
-            <Text size="m" color="primary">
-              10 reviews
-            </Text>
+            <div className="restaurant-head-stars">
+              <Text size="m" color="primary">
+                4
+              </Text>
+              <Icon size="s" icon={faStar} />
+              <Icon size="s" icon={faStar} />
+              <Icon size="s" icon={faStar} />
+              <Icon size="s" icon={faStar} />
+              <Icon size="s" icon={faStar} />
+              <Text size="m" color="primary">
+                10 reviews
+              </Text>
+            </div>
           </div>
-          <Button type="border">
-            <Icon icon={faRoad} />
-          </Button>
-          <Button type="border">
-            <Icon icon={faShareNodes} />
-          </Button>
+          <div className="restaurant-head-btn">
+            <Button type="round-border">
+              <Icon icon={faRoad} /> &nbsp; Directions
+            </Button>
+            <Button type="round-border">
+              <Icon icon={faShareNodes} /> &nbsp; Share
+            </Button>
+          </div>
         </div>
 
         <div className="restaurant-review-head">

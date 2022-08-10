@@ -1,15 +1,15 @@
 import classNames from "classnames";
 import "./Card.css";
 
-export function Card({ children, color, className }) {
+export function Card({ children, type, className }) {
   return (
     <div
       className={classNames("card", className, {
-        "card-brand": color === "brand" || color == null,
-        "card-primary": color === "primary",
-        "card-secondary": color === "secondary",
-        "card-subtle": color === "subtle",
-        "card-light": color === "light",
+        "card-brand": type === "brand" || type == null,
+        "card-primary": type === "primary",
+        "card-secondary": type === "secondary",
+        "card-subtle": type === "subtle",
+        "card-light": type === "light",
       })}
     >
       {children}

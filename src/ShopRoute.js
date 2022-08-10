@@ -11,7 +11,7 @@ export function ShopRoute() {
   return (
     <div className="shop-root">
       <div className="shop-root-main">
-        <Card className="shop-root-main-card" color="subtle">
+        <Card className="shop-root-main-card" type="subtle">
           <Button type="shop-root-main-btn-round">
             <img
               className="btn-round"
@@ -31,7 +31,7 @@ export function ShopRoute() {
             Gifts
           </Button>
         </Card>
-        <Card className="shop-root-main-card" color="light">
+        <Card className="shop-root-main-card" type="light">
           Best Sellers
         </Card>
       </div>

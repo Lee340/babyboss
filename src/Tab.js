@@ -13,7 +13,7 @@ import "./HomeRoute.css";
 export function Tab({ selectedTab, setSelectedTab }) {
   return (
     <>
-      <Card color="light" className="main-tabselector">
+      <Card type="light" className="main-tabselector">
         <Button
           onClick={() => setSelectedTab(0)}
           className={selectedTab === 0 ? "selected-tab" : null}

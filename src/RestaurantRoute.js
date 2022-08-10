@@ -19,7 +19,7 @@ export function RestaurantRoute({ user, setUser, id, name }) {
 
   return (
     <div>
-      <Card className="restaurant-card" color="subtle">
+      <Card className="restaurant-card" type="subtle">
         <div className="restaurant-head">
           <Text className="restaurant-name" size="l" color="primary">
             {name}
@@ -37,10 +37,10 @@ export function RestaurantRoute({ user, setUser, id, name }) {
               10 reviews
             </Text>
           </div>
-          <Button color="border">
+          <Button type="border">
             <Icon icon={faRoad} />
           </Button>
-          <Button color="border">
+          <Button type="border">
             <Icon icon={faShareNodes} />
           </Button>
         </div>
@@ -49,15 +49,15 @@ export function RestaurantRoute({ user, setUser, id, name }) {
           <Text size="l" color="primary">
             Reviews
           </Text>
-          <Button color="border">
+          <Button type="border">
             <Icon color="brand" size="l" icon={faMagnifyingGlass} />
           </Button>
-          <Button color="border">
+          <Button type="border">
             <Icon color="brand" size="l" icon={faBarsProgress} />
             &nbsp;Sort
           </Button>
         </div>
-        <Card color="light" className="restaurant-body">
+        <Card type="light" className="restaurant-body">
           here
           <div className="restaurant-review-stars">
             <Icon icon={faStar} />
@@ -78,7 +78,7 @@ export function RestaurantRoute({ user, setUser, id, name }) {
             </Button>
           </div>
         </Card>
-        <Card color="light" className="restaurant-body">
+        <Card type="light" className="restaurant-body">
           here
           <div className="restaurant-review-stars">
             <Icon icon={faStar} />

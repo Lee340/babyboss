@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { faCoffee, faStar } from "@fortawesome/free-solid-svg-icons";
-import { Card } from "./Card";
 import { Tab } from "./Tab";
 import { Text } from "./Text";
 import { Icon } from "./Icon";
@@ -19,8 +18,9 @@ import { app } from "./FirebaseApp";
 
 const db = getDatabase(app);
 const brunch = new LeafletIcon({
-  iconUrl:
-})
+  leafketIconUrl: "./brunch",
+  leafletIconSize: [25, 25],
+});
 
 // function writeUserData(userId, name, email, imageUrl) {
 //   set(ref(db, "users/" + userId), {
@@ -55,7 +55,7 @@ export function HomeRoute({ setRoute }) {
       <Tab selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <div className="list-map-container">
         <div className="list">
-          <Button color="subtle" className="list-item">
+          <Button type="subtle" className="list-item">
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
             <div className="list-item-content">
               <Text color="primary" size="l">
@@ -78,7 +78,7 @@ export function HomeRoute({ setRoute }) {
             onClick={() => {
               setRoute({ type: "review", id: 1234 });
             }}
-            color="subtle"
+            type="subtle"
             className="list-item"
           >
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
@@ -88,7 +88,7 @@ export function HomeRoute({ setRoute }) {
             onClick={() => {
               setRoute({ type: "restaurant" });
             }}
-            color="subtle"
+            type="subtle"
             className="list-item"
           >
             <img className="list-item-img" alt="Kids Toys" src="./toys.jpeg" />
@@ -116,11 +116,11 @@ export function HomeRoute({ setRoute }) {
           />
 
           {places.length > 0 && (
-            <Marker position={[places[0].Latitude, places[0].Longitude]}>
-              <Popup>
-                <Icon icon={faCoffee} />
-                {A pretty CSS3 popup.} <br /> Easily customizable.
-              </Popup>
+            <Marker
+              position={[places[0].Latitude, places[0].Longitude]}
+              leafletIcon={brunch}
+            >
+              <Popup>Easily customizable.</Popup>
             </Marker>
           )}
         </MapContainer>

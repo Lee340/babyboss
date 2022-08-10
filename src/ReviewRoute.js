@@ -25,7 +25,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
 
   return (
     <div>
-      <Card className="review-card" color="subtle">
+      <Card className="review-card" type="subtle">
         <div className="review-restaurant-name">
           <Text size="l" color="primary">
             {name}
@@ -58,7 +58,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
               </div>
             </>
           ) : (
-            <Button color="primary">Login</Button>
+            <Button type="primary">Login</Button>
           )}
         </div>
         <div className="review-stars">
@@ -125,7 +125,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setAge01(true);
                 }
               }}
-              color={age01 ? "primary" : "border"}
+              type={age01 ? "primary" : "border"}
             >
               0-1yr
             </Button>
@@ -138,7 +138,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setAge02(true);
                 }
               }}
-              color={age02 ? "primary" : "border"}
+              type={age02 ? "primary" : "border"}
             >
               1-3yr
             </Button>
@@ -150,7 +150,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setAge03(true);
                 }
               }}
-              color={age03 ? "primary" : "border"}
+              type={age03 ? "primary" : "border"}
             >
               3-5yr
             </Button>
@@ -162,7 +162,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setAge04(true);
                 }
               }}
-              color={age04 ? "primary" : "border"}
+              type={age04 ? "primary" : "border"}
             >
               5-10yr
             </Button>
@@ -174,7 +174,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setAge05(true);
                 }
               }}
-              color={age05 ? "primary" : "border"}
+              type={age05 ? "primary" : "border"}
             >
               Over 10yr
             </Button>
@@ -190,7 +190,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setOrderTypeSelection(0);
                 }
               }}
-              color={orderTypeSelection === 0 ? "primary" : "border"}
+              type={orderTypeSelection === 0 ? "primary" : "border"}
             >
               Dine in
             </Button>
@@ -202,7 +202,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setOrderTypeSelection(1);
                 }
               }}
-              color={orderTypeSelection === 1 ? "primary" : "border"}
+              type={orderTypeSelection === 1 ? "primary" : "border"}
             >
               Take out
             </Button>
@@ -214,7 +214,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setOrderTypeSelection(2);
                 }
               }}
-              color={orderTypeSelection === 2 ? "primary" : "border"}
+              type={orderTypeSelection === 2 ? "primary" : "border"}
             >
               Delivery
             </Button>
@@ -230,7 +230,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setMealSelection(0);
                 }
               }}
-              color={mealSelection === 0 ? "primary" : "border"}
+              type={mealSelection === 0 ? "primary" : "border"}
             >
               Breakfast
             </Button>
@@ -242,7 +242,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setMealSelection(1);
                 }
               }}
-              color={mealSelection === 1 ? "primary" : "border"}
+              type={mealSelection === 1 ? "primary" : "border"}
             >
               Brunch
             </Button>
@@ -254,7 +254,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setMealSelection(2);
                 }
               }}
-              color={mealSelection === 2 ? "primary" : "border"}
+              type={mealSelection === 2 ? "primary" : "border"}
             >
               Lunch
             </Button>
@@ -266,7 +266,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setMealSelection(3);
                 }
               }}
-              color={mealSelection === 3 ? "primary" : "border"}
+              type={mealSelection === 3 ? "primary" : "border"}
             >
               Dinner
             </Button>
@@ -278,7 +278,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setMealSelection(4);
                 }
               }}
-              color={mealSelection === 4 ? "primary" : "border"}
+              type={mealSelection === 4 ? "primary" : "border"}
             >
               Other
             </Button>
@@ -294,7 +294,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setPriceSelection(0);
                 }
               }}
-              color={priceSelection === 0 ? "primary" : "border"}
+              type={priceSelection === 0 ? "primary" : "border"}
             >
               £1-10
             </Button>
@@ -306,7 +306,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setPriceSelection(1);
                 }
               }}
-              color={priceSelection === 1 ? "primary" : "border"}
+              type={priceSelection === 1 ? "primary" : "border"}
             >
               £10-20
             </Button>
@@ -318,7 +318,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setPriceSelection(2);
                 }
               }}
-              color={priceSelection === 2 ? "primary" : "border"}
+              type={priceSelection === 2 ? "primary" : "border"}
             >
               £20-40
             </Button>
@@ -330,7 +330,7 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setPriceSelection(3);
                 }
               }}
-              color={priceSelection === 3 ? "primary" : "border"}
+              type={priceSelection === 3 ? "primary" : "border"}
             >
               £40-60
             </Button>
@@ -342,15 +342,15 @@ export function ReviewRoute({ user, setUser, id, name }) {
                   setPriceSelection(4);
                 }
               }}
-              color={priceSelection === 4 ? "primary" : "border"}
+              type={priceSelection === 4 ? "primary" : "border"}
             >
               Over £60
             </Button>
           </div>
         </div>
         <div className="review-submit">
-          <Button color="border">Cancel</Button>
-          <Button color="primary">Post</Button>
+          <Button type="border">Cancel</Button>
+          <Button type="primary">Post</Button>
         </div>
       </Card>
     </div>

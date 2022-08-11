@@ -18,8 +18,8 @@ import { app } from "./FirebaseApp";
 
 const db = getDatabase(app);
 const brunch = new LeafletIcon({
-  leafketIconUrl: "./brunch",
-  leafletIconSize: [25, 25],
+  iconUrl: "brunch.png",
+  iconSize: [25, 30],
 });
 
 // function writeUserData(userId, name, email, imageUrl) {
@@ -118,7 +118,7 @@ export function HomeRoute({ setRoute }) {
           {places.length > 0 && (
             <Marker
               position={[places[0].Latitude, places[0].Longitude]}
-              leafletIcon={brunch}
+              icon={brunch}
             >
               <Popup>Easily customizable.</Popup>
             </Marker>
